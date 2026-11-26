@@ -14,6 +14,11 @@ public class Cliente {
 
     // TODO [confirmar con ERS]: atributos del cliente / tomador,
     // y su relación con Poliza (tomador/asegurado).
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

@@ -18,20 +18,31 @@ import java.util.List;
 @RequestMapping("/polizas")
 public class PolizaController {
     private final PolizaService service;
-    public PolizaController(PolizaService service) { this.service = service; }
-    @GetMapping public List<Poliza> listar() { return service.consultarTodas(); }
+
+    public PolizaController(PolizaService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public List<Poliza> listar() {
+        return service.consultarTodas();
+    }
+
     @GetMapping("/{id}")
     public Poliza porId(@PathVariable Long id) {
         return service.consultarPorId(id);
     }
+
     @PostMapping
     public Poliza crear(@RequestBody Poliza poliza) {
         return service.alta(poliza);
     }
+
     @PutMapping("/{id}")
     public Poliza modificar(@PathVariable Long id, @RequestBody Poliza poliza) {
         return service.modificacion(id, poliza);
     }
+
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         service.baja(id);

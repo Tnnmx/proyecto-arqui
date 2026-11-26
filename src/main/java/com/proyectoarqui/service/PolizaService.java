@@ -11,14 +11,33 @@ import java.util.List;
 @Service
 public class PolizaService {
     private final PolizaRepository repository;
-    public PolizaService(PolizaRepository repository) { this.repository = repository; }
-    public List<Poliza> consultarTodas() { return repository.findAll(); }
-    public Poliza consultarPorId(Long id) { return repository.findById(id).orElse(null); }
-    public Poliza alta(Poliza poliza) { return repository.save(poliza); }
+
+    public PolizaService(PolizaRepository repository) {
+        this.repository = repository;
+    }
+
+    public List<Poliza> consultarTodas() {
+        return repository.findAll();
+    }
+
+    public Poliza consultarPorId(Long id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public Poliza alta(Poliza poliza) {
+        return repository.save(poliza);
+    }
+
     public Poliza modificacion(Long id, Poliza datos) {
         return repository.findById(id)
-                .map(p -> { p.setTipo(datos.getTipo()); return repository.save(p); })
+                .map(p -> {
+                    p.setTipo(datos.getTipo());
+                    return repository.save(p);
+                })
                 .orElse(null);
     }
-    public void baja(Long id) { repository.deleteById(id); }
+
+    public void baja(Long id) {
+        repository.deleteById(id);
+    }
 }

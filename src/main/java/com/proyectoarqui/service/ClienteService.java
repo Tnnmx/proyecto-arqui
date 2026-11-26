@@ -9,10 +9,23 @@ import java.util.List;
 @Service
 public class ClienteService {
     private final ClienteRepository repository;
-    public ClienteService(ClienteRepository repository) { this.repository = repository; }
-    public List<Cliente> consultarTodos() { return repository.findAll(); }
-    public Cliente consultarPorId(Long id) { return repository.findById(id).orElse(null); }
-    public Cliente alta(Cliente cliente) { return repository.save(cliente); }
+
+    public ClienteService(ClienteRepository repository) {
+        this.repository = repository;
+    }
+
+    public List<Cliente> consultarTodos() {
+        return repository.findAll();
+    }
+
+    public Cliente consultarPorId(Long id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public Cliente alta(Cliente cliente) {
+        return repository.save(cliente);
+    }
+
     public Cliente modificacion(Long id, Cliente datos) {
         // TODO [confirmar con ERS]: al agregar atributos a Cliente, copiarlos
         // aquí desde `datos`, como hace PolizaService con el tipo. Hoy Cliente

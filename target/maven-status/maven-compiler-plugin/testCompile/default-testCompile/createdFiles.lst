@@ -1,0 +1,4 @@
+com\proyectoarqui\service\PolizaServiceTest.class
+com\proyectoarqui\repository\PolizaRepositoryTest.class
+com\proyectoarqui\controller\PolizaControllerTest.class
+com\proyectoarqui\service\ClienteServiceTest.class

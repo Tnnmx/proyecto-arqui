@@ -9,8 +9,20 @@ import java.util.List;
 @Service
 public class BeneficiarioService {
     private final BeneficiarioRepository repository;
-    public BeneficiarioService(BeneficiarioRepository repository) { this.repository = repository; }
-    public List<Beneficiario> consultarTodos() { return repository.findAll(); }
-    public Beneficiario consultarPorId(Long id) { return repository.findById(id).orElse(null); }
-    public Beneficiario alta(Beneficiario beneficiario) { return repository.save(beneficiario); }
+
+    public BeneficiarioService(BeneficiarioRepository repository) {
+        this.repository = repository;
+    }
+
+    public List<Beneficiario> consultarTodos() {
+        return repository.findAll();
+    }
+
+    public Beneficiario consultarPorId(Long id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public Beneficiario alta(Beneficiario beneficiario) {
+        return repository.save(beneficiario);
+    }
 }

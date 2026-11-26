@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\controller\BeneficiarioController.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\controller\ClienteController.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\controller\PolizaController.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\domain\Beneficiario.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\domain\Cliente.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\domain\Poliza.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\ProyectoArquiApplication.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\repository\BeneficiarioRepository.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\repository\ClienteRepository.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\repository\PolizaRepository.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\service\BeneficiarioService.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\service\ClienteService.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\service\PolizaService.java">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\main\resources\application.properties">
+</file>
+<file name="C:\Windows\System32\proyecto-arqui\src\test\resources\application.properties">
+</file>
+</checkstyle>

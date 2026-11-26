@@ -1,0 +1,13 @@
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\controller\BeneficiarioController.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\controller\ClienteController.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\controller\PolizaController.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\domain\Beneficiario.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\domain\Cliente.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\domain\Poliza.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\ProyectoArquiApplication.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\repository\BeneficiarioRepository.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\repository\ClienteRepository.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\repository\PolizaRepository.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\service\BeneficiarioService.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\service\ClienteService.java
+C:\Windows\System32\proyecto-arqui\src\main\java\com\proyectoarqui\service\PolizaService.java

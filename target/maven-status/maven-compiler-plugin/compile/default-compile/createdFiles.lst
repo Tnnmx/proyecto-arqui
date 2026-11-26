@@ -1,0 +1,13 @@
+com\proyectoarqui\domain\Poliza.class
+com\proyectoarqui\repository\BeneficiarioRepository.class
+com\proyectoarqui\ProyectoArquiApplication.class
+com\proyectoarqui\controller\PolizaController.class
+com\proyectoarqui\repository\PolizaRepository.class
+com\proyectoarqui\service\PolizaService.class
+com\proyectoarqui\service\ClienteService.class
+com\proyectoarqui\controller\ClienteController.class
+com\proyectoarqui\controller\BeneficiarioController.class
+com\proyectoarqui\repository\ClienteRepository.class
+com\proyectoarqui\domain\Beneficiario.class
+com\proyectoarqui\domain\Cliente.class
+com\proyectoarqui\service\BeneficiarioService.class

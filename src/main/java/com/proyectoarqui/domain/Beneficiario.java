@@ -19,8 +19,19 @@ public class Beneficiario {
     @ManyToOne
     private Poliza poliza;
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public Poliza getPoliza() { return poliza; }
-    public void setPoliza(Poliza poliza) { this.poliza = poliza; }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Poliza getPoliza() {
+        return poliza;
+    }
+
+    public void setPoliza(Poliza poliza) {
+        this.poliza = poliza;
+    }
 }

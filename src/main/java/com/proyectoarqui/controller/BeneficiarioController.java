@@ -15,12 +15,21 @@ import java.util.List;
 @RequestMapping("/beneficiarios")
 public class BeneficiarioController {
     private final BeneficiarioService service;
-    public BeneficiarioController(BeneficiarioService service) { this.service = service; }
-    @GetMapping public List<Beneficiario> listar() { return service.consultarTodos(); }
+
+    public BeneficiarioController(BeneficiarioService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public List<Beneficiario> listar() {
+        return service.consultarTodos();
+    }
+
     @GetMapping("/{id}")
     public Beneficiario porId(@PathVariable Long id) {
         return service.consultarPorId(id);
     }
+
     @PostMapping
     public Beneficiario crear(@RequestBody Beneficiario beneficiario) {
         return service.alta(beneficiario);

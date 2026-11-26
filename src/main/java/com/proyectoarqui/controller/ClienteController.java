@@ -17,16 +17,26 @@ import java.util.List;
 @RequestMapping("/clientes")
 public class ClienteController {
     private final ClienteService service;
-    public ClienteController(ClienteService service) { this.service = service; }
-    @GetMapping public List<Cliente> listar() { return service.consultarTodos(); }
+
+    public ClienteController(ClienteService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public List<Cliente> listar() {
+        return service.consultarTodos();
+    }
+
     @GetMapping("/{id}")
     public Cliente porId(@PathVariable Long id) {
         return service.consultarPorId(id);
     }
+
     @PostMapping
     public Cliente crear(@RequestBody Cliente cliente) {
         return service.alta(cliente);
     }
+
     @PutMapping("/{id}")
     public Cliente modificar(@PathVariable Long id, @RequestBody Cliente cliente) {
         return service.modificacion(id, cliente);

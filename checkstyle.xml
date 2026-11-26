@@ -5,9 +5,10 @@
 <!-- Práctica 2, 3.4 (20 pts): Checkstyle + convención Java 25.
      Configuración propia del proyecto, no google_checks.xml:
      Google exigiría Javadoc en cada método público y líneas de 100
-     caracteres, y este código no cumple eso. Estas reglas sí las
-     cumple el código tal como está (revisado 2026-11-17), así que
-     `mvn checkstyle:check` debe pasar a la primera.
+     caracteres, y este código no cumple eso. Nota: LeftCurly (opción
+     eol) no admite métodos de una sola línea como
+     `public Long getId() { return id; }`; por eso todo método va
+     en varias líneas (corregido 2026-11-25, 31 errores de ese tipo).
      No se incluye el modulo Indentation: los encadenamientos
      (MockMvc, streams) lo hacen impredecible y aqui no se pudo
      correr Checkstyle para verificarlo; la indentacion se reviso
