@@ -12,10 +12,11 @@ import static org.mockito.Mockito.when;
 
 /** Pruebas unitarias 3.4: ClienteService, sin base de datos.
  *  Casos: NRM-AC alta, NRM-MC modificacion.
- *  OJO: hoy Cliente solo tiene id, asi que modificacion guarda el
- *  cliente como estaba (TODO en ClienteService). Esta prueba deja
- *  ese comportamiento documentado: cuando se agreguen los atributos
- *  de la ERS, aqui debe fallar hasta copiar los campos. */
+ *  Desde 2026-11-26 Cliente ya trae los atributos de la ERS
+ *  (nombres, apellidos, direccion, curp, fecha de nacimiento) y
+ *  modificacion los copia desde `datos` (los que vienen en null no
+ *  se tocan). Esta prueba usa un `datos` vacio, asi que solo
+ *  comprueba que guarda y devuelve el cliente existente. */
 class ClienteServiceTest {
     private final ClienteRepository repository = mock(ClienteRepository.class);
     private final ClienteService service = new ClienteService(repository);

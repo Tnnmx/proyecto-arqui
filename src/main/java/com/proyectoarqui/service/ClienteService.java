@@ -26,10 +26,31 @@ public class ClienteService {
         return repository.save(cliente);
     }
 
+    /** NRM-MC: el cliente puede actualizar su nombre, domicilio y fecha
+     *  de nacimiento, identificando su registro por su CURP (ERS
+     *  requisito 5). La CURP no se modifica: es el identificador del
+     *  registro. Los campos que vienen en null no se tocan, para no
+     *  borrar datos en una modificación parcial. */
     public Cliente modificacion(Long id, Cliente datos) {
-        // TODO [confirmar con ERS]: al agregar atributos a Cliente, copiarlos
-        // aquí desde `datos`, como hace PolizaService con el tipo. Hoy Cliente
-        // solo tiene id, así que no hay nada que copiar.
-        return repository.findById(id).map(c -> repository.save(c)).orElse(null);
+        return repository.findById(id)
+                .map(c -> {
+                    if (datos.getNombres() != null) {
+                        c.setNombres(datos.getNombres());
+                    }
+                    if (datos.getPrimerApellido() != null) {
+                        c.setPrimerApellido(datos.getPrimerApellido());
+                    }
+                    if (datos.getSegundoApellido() != null) {
+                        c.setSegundoApellido(datos.getSegundoApellido());
+                    }
+                    if (datos.getDireccion() != null) {
+                        c.setDireccion(datos.getDireccion());
+                    }
+                    if (datos.getFechaNacimiento() != null) {
+                        c.setFechaNacimiento(datos.getFechaNacimiento());
+                    }
+                    return repository.save(c);
+                })
+                .orElse(null);
     }
 }

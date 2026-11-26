@@ -28,10 +28,22 @@ public class PolizaService {
         return repository.save(poliza);
     }
 
+    /** NRM-MP: se cambian los datos del registro excepto la clave de la
+     *  póliza, que es su identificador. Los campos que vienen en null
+     *  no se tocan, para no borrar datos en una modificación parcial. */
     public Poliza modificacion(Long id, Poliza datos) {
         return repository.findById(id)
                 .map(p -> {
                     p.setTipo(datos.getTipo());
+                    if (datos.getMontoAsegurado() != null) {
+                        p.setMontoAsegurado(datos.getMontoAsegurado());
+                    }
+                    if (datos.getDescripcion() != null) {
+                        p.setDescripcion(datos.getDescripcion());
+                    }
+                    if (datos.getCliente() != null) {
+                        p.setCliente(datos.getCliente());
+                    }
                     return repository.save(p);
                 })
                 .orElse(null);
